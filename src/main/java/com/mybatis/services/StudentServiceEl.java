@@ -26,4 +26,14 @@ public class StudentServiceEl {
 		
 	}
 	
+	public Student selectStudentWithAddress(int stuId) {
+		SqlSession sqlSession = MyBatisSqlSessionFactory.openSession();
+		try {
+			StudentMapperEl studentMapper = sqlSession.getMapper(StudentMapperEl.class);
+			return studentMapper.selectStudentWithAddress(stuId);
+		} finally {
+			sqlSession.close();
+		}
+	}
+	
 }

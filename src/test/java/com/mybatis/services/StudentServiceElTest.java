@@ -34,5 +34,16 @@ public class StudentServiceElTest {
 	}
 	
 	
+	@Test
+	public void testSelectStudentWithAddress() {
+		int studId = 1;
+		Student student = studentService.selectStudentWithAddress(studId);
+		Assert.assertNotNull(student);
+		Assert.assertNotNull(student.getAddress());
+		System.out.println("Name:" + student.getName());
+		System.out.println("Email:" + student.getEmail());
+		System.out.println("Phone:" + student.getPhone());
+		System.out.println("City:" + student.getAddress().getCity());
+	}
 	
 }

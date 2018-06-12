@@ -6,6 +6,8 @@
 	<typeAliases>
 		<typeAlias alias="Student"
 		type="com.mybatis.domain.Student"/>
+		<typeAlias alias="Address"
+		type="com.mybatis.domain.Address"/>
 	</typeAliases>
 	<environments default="development/e_learning">
 		<environment id="development">

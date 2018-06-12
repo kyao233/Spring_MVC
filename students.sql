@@ -6,4 +6,4 @@ insert into students values(2, "Paul", "paul@gmail.com", "111-222-3333", null, n
 
 commit;
 
-Select * from students left join addresses on students.addr_id = addresses.addr_id;
+Select stud_id, name, email, phone, A.addr_id, street, city, state, zip, COUNTRY from students left join addresses A on students.addr_id = A.addr_id where STUD_ID=1;

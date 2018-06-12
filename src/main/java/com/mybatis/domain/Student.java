@@ -9,6 +9,7 @@ public class Student {
 	private String email;
 	private String phone;
 	private Date dob;
+	private Address address;
 	
 	public Integer getStudId() {
 		return studId;
@@ -39,6 +40,12 @@ public class Student {
 	}
 	public void setDob(Date dob) {
 		this.dob = dob;
+	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 	
 	
