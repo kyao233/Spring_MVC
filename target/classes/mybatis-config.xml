@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="Student"
+		type="com.mybatis.domain.Student"/>
+	</typeAliases>
+	<environments default="development/e_learning">
+		<environment id="development">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver"/>
+				<property name="url"
+				value="jdbc:mysql://localhost:8888/students"/>
+				<property name="username" value="kai"/>
+				<property name="password" value="kai"/>
+			</dataSource>
+		</environment>
+		<environment id="development/e_learning">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver"/>
+				<property name="url"
+				value="jdbc:mysql://localhost:8888/e_learning"/>
+				<property name="username" value="kai"/>
+				<property name="password" value="kai"/>
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="com/mybatis3/mappers/StudentMapper.xml"/>
+		<mapper resource="com/mybatis3/mappers/StudentMapperEl.xml"/>
+	</mappers>
+</configuration>
