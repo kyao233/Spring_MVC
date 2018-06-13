@@ -7,7 +7,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.mybatis.domain.Student;
+import com.mybatis.domain.Tutor;
 import com.mybatis.mappers.StudentMapperEl;
+import com.mybatis.mappers.TutorMapperEl;
 import com.mybatis.util.MyBatisSqlSessionFactory;
 
 public class StudentServiceEl {
@@ -35,5 +37,6 @@ public class StudentServiceEl {
 			sqlSession.close();
 		}
 	}
+	
 	
 }

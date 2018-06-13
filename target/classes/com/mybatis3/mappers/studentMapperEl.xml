@@ -25,6 +25,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<association property="address" resultMap="AddressResult" />
 	</resultMap>
 	
+	
+	
+	
 	<select id="findAllStudents" resultMap="StudentResult">
 		SELECT * FROM STUDENTS
 	</select>
@@ -34,5 +37,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		COUNTRY from students left join addresses A on students.addr_id = A.addr_id 
 		where STUD_ID=#{studId};
 	</select>
+	
+
 	
 </mapper>

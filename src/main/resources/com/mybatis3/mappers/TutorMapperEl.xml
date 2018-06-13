@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.mappers.TutorMapperEl">
+	<resultMap type="Course" id="CourseResult">
+		<id property="courseId" column="course_id"/>
+		<result property="name" column="name"/>
+		<result property="description" column="description"/>
+		<result property="startDate" column="startDate"/>
+		<result property="endDate" column="endDate"/>
+		<result property="tutorId" column="tutor_id"/>
+	</resultMap>
+	<resultMap type="Tutor" id="TutorWithCourseResult">
+		<id property="tutorId" column="tutor_id"/>
+		<result property="name" column="tutor_name"/>
+		<result property="email" column="email"/>
+		<result property="phone" column="phone"/>
+		<result property="addrId" column="addr_id" />
+		<collection property="courses" resultMap="CourseResult" />
+	</resultMap>
+	
+	
+
+	<select id="findTutorById" parameterType="int" resultMap="TutorWithCourseResult">
+		select T.tutor_id, T.name as Tutor_name, email, C.course_id, C.name, description, start_date, end_date
+		from tutors T left outer join courses C on T.TUTOR_ID = C.TUTOR_ID where T.tutor_id=#{tutorId}; 
+	</select>
+	
+</mapper>

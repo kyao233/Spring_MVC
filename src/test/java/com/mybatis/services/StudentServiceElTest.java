@@ -7,7 +7,9 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import com.mybatis.domain.Course;
 import com.mybatis.domain.Student;
+import com.mybatis.domain.Tutor;
 
 public class StudentServiceElTest {
 
@@ -45,5 +47,7 @@ public class StudentServiceElTest {
 		System.out.println("Phone:" + student.getPhone());
 		System.out.println("City:" + student.getAddress().getCity());
 	}
+	
+	
 	
 }
