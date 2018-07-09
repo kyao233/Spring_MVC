@@ -8,11 +8,12 @@ public class Address {
 	private String state;
 	private String zip;
 	private String country;
-	public int getAddr_id() {
+
+	public int getAddrId() {
 		return addrId;
 	}
-	public void setAddr_id(int addr_id) {
-		this.addrId = addr_id;
+	public void setAddrId(int addrId) {
+		this.addrId = addrId;
 	}
 	public String getStreet() {
 		return street;

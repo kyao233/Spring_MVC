@@ -18,7 +18,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		FROM STUDENTS WHERE STUD_ID=#{Id}
 	</select>
 	<insert id="insertStudent" parameterType="Student">
-		INSERT INTO STUDENTS(STUD_ID,NAME,EMAIL,DOB)
-		VALUES(#{studId },#{name},#{email},#{dob})
+		INSERT INTO STUDENTS(STUD_ID,NAME,EMAIL,DOB,BIO,PIC,ADDR_ID)
+		VALUES(#{studId },#{name},#{email},#{dob},#{bio},#{pic},#{address.addrId})
 	</insert>
 </mapper>

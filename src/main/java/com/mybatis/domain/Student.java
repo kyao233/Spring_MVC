@@ -9,6 +9,8 @@ public class Student {
 	private String email;
 	private String phone;
 	private Date dob;
+	private String bio;
+	private String pic;
 	private Address address;
 	
 	public Integer getStudId() {
@@ -40,6 +42,19 @@ public class Student {
 	}
 	public void setDob(Date dob) {
 		this.dob = dob;
+	}
+	
+	public String getBio() {
+		return bio;
+	}
+	public void setBio(String bio) {
+		this.bio = bio;
+	}
+	public String getPic() {
+		return pic;
+	}
+	public void setPic(String pic) {
+		this.pic = pic;
 	}
 	public Address getAddress() {
 		return address;
