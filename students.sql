@@ -5,7 +5,7 @@ insert into students values(1, "John", "john@gmail.com", "123-456-7890", null, n
 insert into students values(2, "Paul", "paul@gmail.com", "111-222-3333", null, null, null, 2);
 insert into students values(3, "Paul2", "paul2@gmail.com", "111-222-3333", null, null, null, 2);
 select * from students;
-delete from students where STUD_ID=3;
+delete from students where STUD_ID=11;
 commit;
 
 Select stud_id, name, email, phone, A.addr_id, street, city, state, zip, COUNTRY from students left join addresses A on students.addr_id = A.addr_id where STUD_ID=1;

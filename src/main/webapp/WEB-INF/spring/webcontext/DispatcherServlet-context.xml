@@ -118,8 +118,7 @@ http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.3.x
 	</webflow-config:flow-registry>
 	
 	<!-- java bean for mybatis -->
-	<bean id="datesource" class="org.springframework.jdbc.datasource.
-	DriverManagerDataSource">
+	<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost:8888/e_learning" />
 		<property name="username" value="kai" />
@@ -127,10 +126,9 @@ http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.3.x
  	</bean>
  	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean" >
  		<property name="dataSource" ref="dataSource" />
- 		<property name="typeAliases" value="com.mybatis.domain.Student,
- 		com.mybatis.domain.Tutor" />
+ 		<property name="typeAliases" value="com.mybatis.domain.Student,com.mybatis.domain.Tutor" />
  		<property name="typeAliasesPackage" value="com.mybatis.domain" />
- 		<property name="mapperLocation" value="classpath*:com/mybatis/mappers/*.xml" />
+ 		<property name="mapperLocations" value="classpath*:com/mybatis/mappers/*.xml" />
  		<property name="configLocation" value="mybatis-config.xml" />
  	</bean>
 	<bean id="sqlSession" class="org.mybatis.spring.sqlSessionTemplate" >
@@ -139,11 +137,10 @@ http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.3.x
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" >
 		<property name="basePackage" value="com.mybatis.mappers" />
 	</bean>
-	<bean id="transactionManager" class="org.springframework.jdbc.
-	datasource.DataSourceTransactionManager">
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
-	
+	 -->
 	<!-- java bean for mybatis -->
 	
 </beans>

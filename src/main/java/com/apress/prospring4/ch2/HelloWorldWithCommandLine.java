@@ -1,5 +1,4 @@
 package com.apress.prospring4.ch2;
-
 public class HelloWorldWithCommandLine {
 	
 	public static void main(String[] args) {
