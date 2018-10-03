@@ -32,12 +32,7 @@ http://www.springframework.org/schema/webflow-config/spring-webflowconfig-2.3.xs
  		<property name="mapperLocations" value="classpath*:com/mybatis/mappers/*.xml" />
  		<property name="configLocation" value="mybatis-config.xml" />
  	</bean>
-	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" >
-		<constructor-arg index="0" ref="sqlSessionFactory" />
-	</bean>	
-	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource" />
-	</bean>
+	
 	<!-- java bean for mybatis -->
 	
 </beans>

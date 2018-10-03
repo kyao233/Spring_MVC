@@ -12,10 +12,10 @@ import com.mybatis.domain.Student;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("test-app-context.xml")
-public class StduentServiceELSTest {
+public class StduentServiceEL_spring_managed_Test {
 	
 	@Autowired
-	private StudentServiceELS studentService;
+	private StudentServiceEL_spring_managed studentService;
 	
 	@Test
 	public void testCreateStudent() {
@@ -23,7 +23,7 @@ public class StduentServiceELSTest {
 		Address address = new Address();
 		address.setAddrId(2);
 		long ts = System.currentTimeMillis();
-		student.setStudId(3);
+		student.setStudId(2);
 		student.setName("stud_" + ts);
 		student.setEmail("stud_" + ts + "@gamil.com");
 		student.setAddress(address);
