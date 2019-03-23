@@ -101,7 +101,7 @@ http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.3.x
 	</bean>	
 	<bean id="imageSizeValidator" class="com.packt.webstore.validator.ImageSizeValidator">
 	</bean>	
-	
+	<!-- 
 	<bean id="flowHandlerMapping" class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping">
 		<property name="flowRegistry" ref="flowRegistry" />
 	</bean>
@@ -116,7 +116,7 @@ http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.3.x
 	<webflow-config:flow-registry id="flowRegistry" base-path="/WEBINF/flows">
 		<webflow-config:flow-location path="/checkout/checkout-flow.xml" id="checkout"/>
 	</webflow-config:flow-registry>
-	
+	 -->
 	<!-- java bean for mybatis -->
 	 <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
