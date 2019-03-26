@@ -53,4 +53,21 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 	<servlet-name>DispatcherServlet</servlet-name>
 </filter-mapping>
 
+<!-- context init param listener -->
+<context-param>
+	<param-name>companyName</param-name>
+	<param-value>Lenovo</param-value>
+</context-param>
+
+<context-param>
+	<param-name>oldCompanyName</param-name>
+	<param-value>OldLenovo</param-value>
+</context-param>
+
+<listener>
+	<listener-class>com.servlet.listener.InitCompanyNameListener</listener-class>
+</listener>
+
+
+
 </web-app>

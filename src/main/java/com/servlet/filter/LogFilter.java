@@ -27,6 +27,9 @@ public class LogFilter implements Filter {
 			throws IOException, ServletException {
 		this.servletContext.log("filterName: " + filterName + 
 				"context path: " + this.servletContext.getContextPath()); //获取应用程序上下文路径
+		//the servlet container root is requested url - contextPath url.
+		chain.doFilter(request, response);
+	
 	}
 
 	@Override
